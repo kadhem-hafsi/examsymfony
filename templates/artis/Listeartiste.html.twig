@@ -1,0 +1,25 @@
+<center>
+<h3>Liste des artistes</h3>
+<table border=1>
+<tr>
+<th>Id</th>
+<th>name</th>
+<th>details</th>
+<th>Suprimer</th>
+<th>Liste ouevres</th>
+<th>nombre ouevres</th>
+</tr>
+<tr{% for a in artistes %}>
+<td>{{a.id}}</td>
+<td>artiste{{a.id}}</td>
+
+<td><a href="{{path('D',{'id':a.id})}}">details</a></td>
+<td><a href="{{path('S',{'id':a.id})}}">Suprimer</a></td>
+<td><a href="{{path('L',{'id':a.id})}}">ouevres</a></td>
+<td><a href="{{path('N',{'id':a.id})}}">Nombre</a></td>
+
+</tr>
+{% endfor %}
+</table>
+
+</center>

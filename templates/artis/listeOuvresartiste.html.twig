@@ -1,0 +1,11 @@
+
+<center>
+<h3>Liste des oeuvres de  </h3>
+<a href="{{path('app_artisListe')}}">return liste artiste</a>
+{% for ar in artistes %}
+
+<h4>{{ar.title}}</h4>
+
+{% endfor %}
+
+</center>
